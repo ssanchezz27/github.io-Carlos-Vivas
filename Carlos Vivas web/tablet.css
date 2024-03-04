@@ -1,0 +1,121 @@
+@media (min-width: 595px) {
+   .title__presentation{
+    width: 100%;
+    height: 6rem;
+   }
+
+   .title {
+    font-size: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    margin-top: 4rem;
+}
+
+/* Efecto hover */
+.buttons button:hover {
+    transform: scale(1.05); /* Incremento leve al hacer hover */
+}
+
+.title p {
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #e9e8e8df;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+}
+
+  .ubication__section--container{
+    max-width: 606px;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+   }
+
+   .buttons button {
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+   }
+
+.perfil__ficha{
+    padding: 2rem;
+}
+.project__tittle, .project__tittle p {
+    font-size: 1.8rem;
+    width: 100%;
+}
+
+.perfil__contenido {
+    grid-template-columns: 1fr 2fr; 
+}
+
+.perfil__photo--container {
+    order: 1; 
+}
+
+.perfil__text {
+    order: 2; 
+}
+
+.presentation__container {
+    height: 38rem;
+}
+
+.perfil__text{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+.perfil__text {
+    text-align: left;
+    line-height: 4rem;
+    font-size: 1.8rem;
+}
+
+.see__post a {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease; /* Agregar transición */
+}
+
+.see__post:hover a {
+    transform: scale(1.05); /* Incremento leve al hacer hover */
+}
+
+.perfil__contenido {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    flex-direction: row-reverse;
+}
+
+.perfil__photo--container {
+    margin-right: 20px; /* Espacio entre la foto y el texto */
+}
+
+.perfil__info {
+    display: flex;
+    flex-direction: column-reverse; /* Apila los elementos uno encima del otro */
+    align-items: center;
+}
+
+.button-ins {
+    margin-top: 10px; /* Espacio entre el texto y el botón */
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: transparent; /* Color de fondo del botón */
+    color: #000000; /* Color del texto del botón */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+.button-ins a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.button-ins:hover {
+    background-color: #ffffff35; /* Cambia el color de fondo al pasar el ratón */
+}
+}

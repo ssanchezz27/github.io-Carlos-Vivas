@@ -1,0 +1,134 @@
+@media (min-width: 1020px){
+
+    .mobile-menu, .mobile-header{
+        display: none;
+    }
+
+    .desktop-header {
+        display:block;
+        height: 8rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #f8f8f8;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.8);
+        z-index: 1001;
+    }
+
+    .logo{
+        margin-right: auto;
+    }
+
+    .desktop-menu {
+        margin-left: auto;
+    }
+    
+    .presentation__container{
+        height: 55rem;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .logo img {
+        max-height: 60px;
+    }
+    
+    .desktop-menu ul {
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+    }
+    
+    .desktop-menu ul li {
+        font-size: 1.6rem;
+    }
+    
+    .desktop-menu ul li:last-child {
+        margin-right: 0;
+    }
+    
+    .desktop-menu a {
+        text-decoration: none;
+        color: #433f3f;
+        transition: color 0.3s ease;
+    }
+    
+    .desktop-menu a:hover {
+        color: #826e17;
+    }
+    .ubication__images--container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(200px, auto);
+        gap: 20px;
+    }
+    
+    .image__container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
+    }
+    
+    .photo__consultorio1,
+    .photo__consultorio2,
+    .photo__consultorio3,
+    .photo__consultorio4,
+    .photo__consultorioV1,
+    .photo__consultorioV2 {
+        width: 100%;
+        height: 100%; /* Ajusta la altura al 100% para ocupar todo el espacio del contenedor */
+        object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+        transition: transform 0.3s ease; /* Agrega una transición suave */
+    }
+    
+    .photo__consultorio1 {
+        grid-column: span 2; /* Ocupa dos columnas */
+        grid-row: span 2; /* Ocupa dos filas */
+    }
+    
+    .photo__consultorio2 {
+        grid-column: span 1; /* Ocupa una columna */
+        grid-row: span 1; /* Ocupa una fila */
+    }
+    
+    .photo__consultorio3 {
+        grid-column: span 1; /* Ocupa una columna */
+        grid-row: span 1; /* Ocupa una fila */
+    }
+    
+    .photo__consultorio4 {
+        grid-column: span 1; /* Ocupa una columna */
+        grid-row: span 1; /* Ocupa una fila */
+    }
+    
+    .photo__consultorioV1 {
+        grid-column: span 1; /* Ocupa una columna */
+        grid-row: span 1; /* Ocupa una fila */
+    }
+    
+    .photo__consultorioV2 {
+        grid-column: span 1; /* Ocupa una columna */
+        grid-row: span 1; /* Ocupa una fila */
+    }
+    
+    /* Efecto de aumento al pasar el ratón sobre la imagen */
+    .image__container:hover .photo__consultorio1,
+    .image__container:hover .photo__consultorio2,
+    .image__container:hover .photo__consultorio3,
+    .image__container:hover .photo__consultorio4,
+    .image__container:hover .photo__consultorioV1,
+    .image__container:hover .photo__consultorioV2 {
+        transform: scale(1.05); 
+    }
+    
+    .photo__consultorioV2, .photo__consultorioV1 {
+        display: block;
+    }
+    
+}

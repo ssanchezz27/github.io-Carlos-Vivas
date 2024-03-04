@@ -1,0 +1,555 @@
+* {
+    box-sizing: border-box; margin: 0; padding: 0;
+}
+
+html{font-size: 62.5%; font-family: 'Nunito', sans-serif; scroll-behavior: smooth;}
+
+.desktop-header{
+    display: none;
+}
+
+header{
+    height: 8rem;
+    position: fixed;
+    box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.8);
+    width: 100%;
+}
+
+.mobile-menu {
+    position: fixed;
+    bottom: 0;
+    right: -30rem; 
+    font-family: poppins, sans-serif,;
+    width: 250px; 
+    height: 100vh; 
+    background-color: #f0f0f0; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    transition: right 0.3s ease; 
+    z-index: 1000; 
+}
+
+.mobile-menu.active {
+    right: 0; /* Muestra el menú desplazándolo hacia la izquierda */
+}
+
+.mobile-menu ul {
+    list-style-type: none;
+    margin: 14rem 0 0 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.mobile-menu ul li {
+    padding: 3rem 2rem;
+    border-bottom: 1px solid #433f3f; /* Línea divisoria entre elementos del menú */
+    font-size: 1.6rem;
+}
+
+.mobile-menu ul li i {
+    margin-right: 1rem;
+}
+
+.mobile-menu ul li:last-child {
+    border-bottom: none; /* Elimina la línea divisoria del último elemento */
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: #826e17;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8; /* Ajusta el color de fondo según sea necesario */
+    z-index: 1000; /* Asegura que esté por encima del resto del contenido */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem /* Ajusta el espaciado según sea necesario */
+}
+
+.logo img {
+    max-height: 6rem; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+.menu-icon img {
+    max-height: 2.5rem; /* Ajusta el tamaño del icono del menú según sea necesario */
+}
+
+.logo-menu img{
+    margin: 2rem;
+    width: 10.1rem;
+    height: 10rem;
+}
+
+.logo-menu  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.logo-menu img {
+    max-width: 80%; 
+}
+
+.submenu {
+    display: none;
+    position: relative; /* Cambiado a posición relativa */
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style: none;
+}
+
+.submenu li {
+    font-size: 1.2rem;
+}
+
+.submenu.show {
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center; /* Cambiamos a bloque para que se muestre */
+    top: 22rem; /* Ajustar valor según sea necesario */
+    background-color: #f7f6f6df;
+    border-radius: 10px;
+}
+
+.contact-dropdown ul{
+    margin-top: -18rem;
+}
+
+.submenu.submenu.show li{
+    padding: 1.6rem;
+}
+
+.presentation__container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    height: 40rem;
+    margin-top: 7rem;
+    padding: 2rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./Assets/imgs/presentation-walp.jpg); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    place-content: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+.title {
+    color: #e9e8e8;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    margin-top: 4rem;
+}
+
+.title p {
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #e9e8e8df;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+}
+
+.title h1 {
+    letter-spacing: 1px;
+}
+
+.title span {
+    color: #37cd9d;
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 5rem;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.buttons button {
+    padding: 10px 20px; 
+    border: 1px solid #e9e8e8;
+    background-color: transparent;
+    color: #e9e8e8;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.4rem; 
+    cursor: pointer;
+    border-radius: 30px;
+}
+.button-ins {
+    margin-top: 10px; /* Espacio entre el texto y el botón */
+    text-decoration: none;
+    width: 18rem;
+    padding: 10px 20px;
+    background-color: transparent; /* Color de fondo del botón */
+    color: #000000; /* Color del texto del botón */
+    border-radius: 5px;
+    font-family: 'Nunito',sans-serif;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+.button-ins a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.buttons .button-1{
+    background-color: #e9e8e8;
+    color: #433f3f;
+}
+
+.perfil__ficha {
+    display: flex;
+    justify-content: center;
+}
+
+.perfil__contenido {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 600px; /* ajusta según sea necesario */
+    padding: 4rem;
+    background-color: #fcfffefb;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.perfil__photo--container {
+    display: flex;
+    justify-content: center;
+}
+
+.perfil__photo--container img {
+    max-width: 100%;
+    height: 40rem;
+    border-radius: 15px;
+}
+
+.perfil__info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.perfil__text {
+    margin: 2rem 0 2rem 0;
+    font-size: 1.8rem;
+    text-align: left;
+    text-align: center;
+    max-width: 339px;
+}
+.perfil__text span {
+    color: #269572;
+}
+
+.projects__container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    text-align: center;
+    background-color: #eff1f0;
+}
+
+.project__tittle{
+    font-size: 1.4rem;
+    color: #000000;
+    margin-top: 3rem;
+}
+
+.project__tittle p{
+    margin-top: 1rem;
+    font-size: 1.6rem;
+}
+
+.restauradores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem 0 4rem;
+    gap: 3rem;
+}
+
+.card__restauradores {
+    width: 30rem;
+    height: 25rem;
+    margin-top: 2rem;
+    display: flex;
+    place-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px 10px 0 0;
+    padding: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+.card__restauradores.card__restauradores-1 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(./Assets/imgs/trabajo-4.jpg);
+}
+
+.card__restauradores.card__restauradores-2 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(./Assets/imgs/estet__photo.jpg);
+}
+
+.card__restauradores.card__restauradores-3 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(./Assets/imgs/jc-gellidon-uhXlRnt9dTw-unsplash\ \(1\).jpg);
+}
+
+.card__explain{
+    display: flex;
+    flex-wrap: wrap;
+    width: 30rem;
+    height: auto;
+    place-content: center;
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+.card__tittle {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+.card__desc {
+    color: #000000;
+    font-size: 1.6rem;
+}
+
+.see__post {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000000;
+    outline: 1px solid #041513;
+    padding: 4px;
+    overflow: hidden;
+    transition: color 1s;
+    width: 150px;
+    height: 40px;
+    background-color: #ffffff;
+    margin-top: 2.5rem;
+    border: 1px solid black;
+  
+}
+
+.see__post a{
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.project__slider {
+    display: flex;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-x: repeat(100%);
+    scroll-snap-align: start;
+    margin: 0;
+    gap: 16px;
+}
+
+.container__article {
+    position: relative;
+    height: 400px; /* Ajusta la altura según sea necesario */
+    background-image: url("./Assets/imgs/article__photo.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.article__text {
+    position: absolute;
+    width: 100%;
+    top: 50px; 
+    left: 50%; 
+    letter-spacing: 3px;
+    transform: translateX(-50%);
+    color: white; 
+    font-size: 24px; 
+    text-align: center; /
+}
+
+.article__text span {
+    color: #0ddf9d;
+}
+
+.ubication {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 3rem;
+    background-color: #eff1f0;
+}
+
+.ubicaton__text{
+    color: #000000;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    max-width: 600px;
+}
+
+.ubicaton__text p {
+    font-size: 1.6rem;
+    margin: 2rem 0 2rem 0;
+    letter-spacing: 1px;  
+}
+
+.text_ubication--container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    place-content: center;
+}
+
+.button-loc{
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #000000;
+    padding: 2px;
+    overflow: hidden;
+    transition: color 1s;
+    width: 150px;
+    height: 45px;
+    background-color: #eff1f0;
+    margin: 0 0 2rem 0;
+    border: 2px solid black;
+    font-family: 'Nunito',sans-serif;
+}
+
+.button-loc a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.ubication__images--container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photo__consultorio1,
+.photo__consultorio2,
+.photo__consultorio3,
+.photo__consultorio4,
+.photo__consultorioV2,
+.photo__consultorioV1 {
+    width: 75%;
+    height: 20rem;
+    margin: 10px; /* Agrega espacio entre las imágenes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+    background-position: center;
+    background-size: cover;
+    max-width: 300px;
+}
+
+.photo__consultorioV2, .photo__consultorioV1 {
+    display: none;
+}
+
+.perfil__photo--container img {
+    max-width: 255px;
+    max-height: 500px;
+}
+
+.button__direction{
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000000;
+    outline: 1px solid #041513;
+    padding: 4px;
+    overflow: hidden;
+    transition: color 1s;
+    width: 150px;
+    height: 40px;
+    background-color: #ffffff;
+    margin-top: 2rem;
+    border: 1px solid black;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button__container{
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.button__direction a{
+    text-decoration: none;
+    color: #000000;
+}
+
+footer{
+    display: flex;
+    justify-content: baseline;
+    padding: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+    min-width: 320px;
+    height: 250px;
+    background-color: #2e2d2d;
+}
+
+.left__container{
+    display: flex;
+    width: 35%;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.left__container li{
+    margin: 1rem;
+}
+
+footer .left__container ul{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+    color: #ffffff;
+}
+
+footer .left__container a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.myname{
+    color: #0ddf9d;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+}
